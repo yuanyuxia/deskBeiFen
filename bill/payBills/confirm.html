@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0 ,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生活圈</title>
+    <link rel="stylesheet" href="css/base.css"> 
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="font/iconfont.css"> 
+    <script src="js/rem.js"></script>
+</head>
+<body>
+    <div class="lingqu">
+      <div class="telNum">
+          <span class="telNumPic"><img src="imgs/tel.png" alt=""></span>
+          <input type="text" placeholder="请输入手机号">
+      </div>
+      <div class="confirmNum clearfix">
+            <span class="eyePic"><img src="imgs/eye.png" alt=""></span>
+            <input type="text" placeholder="请输入手机号">
+            <!-- <a href="javascript:;" class="checkData fr">获取验证码</a> -->
+            <input class="checkData fr" type="button" id="btnSendCode" value="获取验证码" onclick="sendMessage()">
+      </div>
+       <a href="javascript:;" class="getBtn confirmBtn">确认领取</a>
+       
+       <p class="prompt">注：下载呦车呦位APP可提现</p>
+    </div>
+    <!-- 弹窗 -->
+      <div class="tankuang">
+          <p>领取成功，请完善车辆信息</p>
+          <span class="perfect">完善</span>
+      </div>
+    <!-- 遮罩 -->
+   <div class="perfect_mask"></div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        // 出现弹窗和遮罩
+     $(".confirmBtn").click(function(){
+      $(".perfect_mask").css({"display":"block"});
+      $(".tankuang").css({
+        "display":"block"
+      });
+     })
+  // 关闭弹窗和遮罩
+  $(".perfect").click(function(){
+    $(".perfect_mask").css({"display":"none"});
+      $(".tankuang").css({
+        "display":"none"
+      });
+  })
+
+  //发送验证码 倒计时
+  var InterValObj; //timer变量，控制时间 
+var count = 60; //间隔函数，1秒执行 
+var curCount;//当前剩余秒数 
+
+function sendMessage() { 
+ 　curCount = count; 
+　　//设置button效果，开始计时 
+   $("#btnSendCode").attr("disabled", "true"); 
+   $("#btnSendCode").val(curCount + "s"); //按钮倒计时秒数
+   $("#btnSendCode").css({"background":"#e1e1e1"});//原始按钮样式
+   InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次  
+} 
+  
+//timer处理函数 
+function SetRemainTime() { 
+      if (curCount == 0) {         
+        window.clearInterval(InterValObj);//停止计时器 
+        $("#btnSendCode").removeAttr("disabled");//启用按钮 
+        $("#btnSendCode").val("重新发送"); 
+        $("#btnSendCode").css({"background":"#429afa","color":"#fff"});//改变按钮样式 背景颜色
+      } 
+      else { 
+        curCount--; 
+        $("#btnSendCode").val(curCount + "s"); 
+      } 
+    } 
+    </script>
+</body>
+</html>

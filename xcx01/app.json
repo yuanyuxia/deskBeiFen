@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/info/info",
+    "pages/message/message", 
+    
+   
+    "pages/logs/logs"
+
+  ], 
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTitleText": "小程序欢迎你",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":false
+    
+  },
+  "tabBar":{
+    "color":"#999",
+    "selectedColor": "#444",
+    "backgroundColor":"#b3d4db",
+    "borderStyle": "black",
+    "list":[
+     {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"assets/tabs/home.png",
+        "selectedIconPath":"assets/tabs/home-active.png"   
+     },
+  
+    {
+      "pagePath": "pages/info/info",
+      "text": "我的",
+      "iconPath": "assets/tabs/info.png",
+      "selectedIconPath": "assets/tabs/info-active.png"
+    },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "assets/tabs/message.png",
+        "selectedIconPath": "assets/tabs/message-active.png"
+      }
+    ]
+  }
+
+
+
+}

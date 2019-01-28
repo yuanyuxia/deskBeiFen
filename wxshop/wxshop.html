@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta content="telephone=no" name="format-detection">
+    <title>首页</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <script type="text/javascript" src="libs/jquery-1.11.1.min.js"></script>
+ 
+
+    
+</head>
+<style type="text/css">
+	html {  
+    -ms-touch-action: none;  
+} 
+</style>
+<body class="IndexBody">
+
+	
+    <!--页脚-->
+    <div class="footer">
+        <ul class="flex">
+            <li class="flex1 on"><a href="javascript:;"><span></span>首页</a></li>
+			<li class="flex1"><a href="javascript:;"> <span></span>我的微店</a></li>
+            <li class="flex1"><a href="javascript:;"><span></span>我的</a></li>
+       </ul>
+    </div>
+</body>
+<script>
+	$(function(){
+    /*页脚切换*/
+    $(".footer ul li").on("click",function(){
+        $(this).addClass("on").siblings().removeClass("on");
+    });    
+	 
+});
+</script>
+</html>

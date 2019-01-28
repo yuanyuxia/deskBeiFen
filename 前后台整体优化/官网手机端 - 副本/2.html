@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>滑入滑出效果</title>
+        <style>
+            .content {
+                width: 100px;
+                height: 300px;
+                background: cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <button class="btn-slide-down">滑下</button>
+            <button class="btn-slide-toggle">滑下/滑上</button>
+            <div class="content">
+                <button class="btn-slide-up">滑上</button>
+                <p>这是一段很普通的内容</p>
+            </div>
+        </div>
+    </body>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function() {
+            $('.btn-slide-down').on('click', function() {
+                $('.content').slideDown('fast'); //参数，ms（fast，slow），回调函数;
+            });
+            $('.btn-slide-up').on('click', function() {
+                $('.content').slideUp('fast');
+            });
+            $('.btn-slide-toggle').on('click', function() {
+                $('.content').slideToggle(100, function() {
+                    console.log('滑下滑上效果');
+                })
+            })
+        })
+    </script>
+</html>
+</html>

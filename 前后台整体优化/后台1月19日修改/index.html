@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>主页</title>
+    <link rel="stylesheet" href="./Ycss/index.css">
+    <link rel="stylesheet" href="./Ycss/base.css">
+    <link rel="stylesheet" href="./Ycss/common.css">
+    <script src="./Yjs/jquery-1.11.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <!--有版心的公共头部  -->
+        <div class="head w1200">
+            <div class="logo">
+                <a href="javascript:;">
+                    <img src="./Yimages/LOGO.png" alt="">
+                </a>
+                <div class="right">
+
+                    <a href="#" class=" user">
+                        4521252
+                        <span>
+                            <img src="./Yimages/Loginaccount.png" alt="">
+                        </span>
+                    </a>
+                    <a href="#" class=" back">
+                        退出
+                        <span>
+                            <img src="./Yimages/Signout.png" alt="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <div class="cont clearfix">
+         <div class="tankuang">
+             <div class="close">×</div>
+             <h3>是否退出登录？</h3>
+             <div class="choose">
+                 <div id="Y " class="active f-l">确定</div>
+                 <div id="N" class=" cancel f-r">取消</div>
+             </div>
+         </div>
+
+        <div class="user_l">
+            <!-- <div class="num">15</div> -->
+         <ul>
+             <li><a href="#"><img src="./Yimages/news.png" alt=""></a></li>
+             <li><a href="#">客户消息</a></li>
+         </ul>
+
+        </div>
+        <div class="news_r">
+            <!-- <div class="close02">×</div> -->
+            <ul>
+                <li><a href="#"><img src="./Yimages/text.png" alt=""></a></li>
+                <li><a href="#">新闻中心</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+        <!--公共底部 -->
+        <div class="footer">
+            <p>
+                <span>©</span>河南宏能网络科技有限公司</p>
+        </div>
+
+    </div>
+  <div class="mask"></div>
+    <!-- 点击关闭弹框 -->
+    <script>
+        $(function(){
+            //点击退出按钮 出现弹框
+            $(".back").click(function(){
+                $(".tankuang").css({"display":"block"});
+                $(".mask").css({"display":"block"});
+            })
+            //点击确定
+            $("#Y").click(function(){
+               
+              $(".tankuang").css({"dispaly":"none"});
+              //退出账号登录
+              //
+            });
+            // 点击关闭符号X 时 弹框消失 
+            $(".close").click(function(){
+                $(".tankuang").css({"display":"none"});
+                  $(".mask").css({"display":"none"});
+            });
+            //点击取消时 弹框消失
+            $("#N").click(function(){
+                $(".tankuang").css({"display":"none"});
+                  $(".mask").css({"display":"none"});
+            })
+           
+            
+        })
+    
+    </script>
+
+
+</body>
+
+</html>

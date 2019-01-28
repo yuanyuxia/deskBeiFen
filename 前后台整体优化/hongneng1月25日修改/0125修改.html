@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     产品页修改：
+          二维码右边按钮 点击切换选中状态
+          1 两个二维码图片标签上下换位置 即 更换索引值
+          2 product.html 58行 <span><a href="javascript:;" >IOS下载</a></span>
+                     <span><a href="javascript:;" class="on" >Android下载</a></span>
+          3  product.css   57行：
+          .banner_btns a.on,.banner_btns a:hover{
+            background-color:#FFF;
+            opacity: .7;
+            color: #5972f0; 
+        }
+        4 切换js
+        $(".banner_btns span").click(function(){
+            var index = $(this).index();
+            $(".banner_btns span").children("a").removeClass("on");
+            $(".banner_btns span").eq(index).children("a").addClass("on");
+        })
+
+
+
+        <!-- 了解更多部分 -->
+        把背景图片换成结构插入图片
+        <div ><img  src="./imgs/erweima2.jpg" alt=""></div>
+        product.css 232行去掉
+</body>
+</html>

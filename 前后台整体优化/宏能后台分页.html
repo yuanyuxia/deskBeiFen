@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+       *{
+           margin: 0;
+           padding: 0;
+       }
+        body{
+            padding-top: 200px;
+        }
+        .page {
+            position: relative;
+            top: -35px;
+            float:right;
+            overflow: hidden;
+            margin-right: 60px;
+            color:#666;
+        }
+        .page span a{
+            display: inline-block;  
+            border: 1px solid #ddd;
+            background: #FFFFFF;
+        }
+        .page a.on,
+        .page span a:hover,
+        .page a:hover{
+            background-color: #0088fe;
+            color: #fff;
+            border: 1px solid #0088fe; 
+        }
+        .page a,.page span a{
+            padding: 6px 15px;
+            margin: 0px 3px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .page .fr input{
+            width: 38px;
+            height: 33px;
+            line-height: 33px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            text-align: center; 
+            color:#000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="fr">
+                 <span><a>首页</a></span>
+                 <span><a>上一页</a></span>
+                 <a class="on">1</a>
+                 <a>2</a>
+                 <a>3</a>
+                 <a>4</a>
+                 <span>...<a>下一页</a></span>
+                 <span><a>尾页</a></span>
+                 <span>共12页</span>
+                 <span>到第</span>
+                 <input  type="text" value="1" />
+                 <span>页</span>
+                 <span><a>确定</a></span>
+            </div>
+    </div>
+</body> 
+</html>

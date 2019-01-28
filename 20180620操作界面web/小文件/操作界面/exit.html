@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>退出</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+    <div class="exit">
+
+        <img src="imgs/bg.jpg" alt="" > 
+        <!-- 头部导航 -->
+        <div class="exit_nav cleafix">
+            <div class="exit_nav_l fl_l"><a href="javascript:;"><img src="imgs/LOGO.png" alt=""></a></div>
+            <div class="exit_nav_r fl_r">
+                <p> <span >您好！欢迎进入呦车呦位停车管理系统！</span>
+                    <span class="tel">账号:13461290601 </span>
+                    <span class="tuichu"><img src="imgs/close.png" alt="" ></span>
+                    <span class="back">退出</span>
+                </p>
+            </div>
+            <div class="bg"><img src="imgs/nav.gif" alt=""></div>
+        </div>
+          <!-- 中间板块 -->
+           <div class="exit_cont">
+               <div class="exit_date clearfix">
+                   <div class="exit_time fl_l">14:30</div>
+                   <div class= "exit_D fl_r">
+                        <span class= "exit_dateR">2018年5月28日</span>
+                        <span class="exit_week">星期一</span>
+                   </div>
+                   
+               </div>
+               <div class="adress">中原万达停车场</div>
+               <div class="exit_shezhi">
+                   <a href="javascript:;"><img src="imgs/sfsz_jpg.png" alt=""></a>
+                   <span class="exit_get">收费设置</span>
+                </div>
+                <!-- 弹框 -->
+                <div class="tankuang">
+                        <div class="close">×</div>
+                        <h3>是否退出登录？</h3>
+                        <div class="choose">
+                            <div id="Y " class="active fl_l">确定</div>
+                            <div id="N" class=" cancel fl_r">取消</div>
+                        </div>
+                    </div>
+           </div>   
+    </div>
+    
+    <!-- 遮罩 -->
+    <div class="exit_mask"> </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+     $(function(){
+            //点击退出按钮 出现弹框
+            $(".back,.tuichu").click(function(){
+                $(".tankuang").css({"display":"block"});
+                $(".exit_mask").css({"display":"block"});
+            })
+            //点击确定
+            $("#Y").click(function(){
+               
+              $(".tankuang").css({"dispaly":"none"});
+              //退出账号登录
+              //
+            });
+            // 点击关闭符号X 时 弹框消失 
+            $(".close").click(function(){
+                $(".tankuang").css({"display":"none"});
+                  $(".exit_mask").css({"display":"none"});
+            });
+            //点击取消时 弹框消失
+            $("#N").click(function(){
+                $(".tankuang").css({"display":"none"});
+                  $(".exit_mask").css({"display":"none"});
+            })
+           
+            
+        })
+    </script>
+</body>
+</html>

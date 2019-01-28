@@ -1,0 +1,289 @@
+/* 通用头部 */
+.layout{
+    width: 100%;  
+    height: 100%;
+    box-sizing: border-box;
+}
+.head{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+.head a{
+    color: #333;
+}
+.user{
+    width: 100%;
+    height: 0.88rem;
+    font-size: 0.36rem;
+    color: #333;
+    line-height: 0.88rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.back {
+    font-size: 0.3rem;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    line-height: 0.88rem;
+  
+}
+
+.top{
+    font-size: 0.32rem;
+    border-bottom: 1px solid #ebebeb;
+    color: #333;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    box-sizing: border-box;
+
+    
+}
+
+/*booking start */
+
+.booking{
+    width: 100%;
+    padding: 0 0.3rem 0 0.25rem;
+    box-sizing: border-box;
+}
+.booking .booking-t{
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.32rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+}
+.b-info{
+   padding-top:  0.4rem;
+    font-size: 0.3rem;
+    color: #333;
+    line-height: 0.5rem;
+    margin-bottom: 0.1rem;
+    box-sizing: border-box;
+}
+
+
+.pic-l ,.pic-r{
+    width: 49.8%;
+}
+ img{
+    width: 100%;
+    display: block;
+
+}
+/*bookiing end*/
+
+
+
+/*count start*/
+.mt{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 0.4rem 0 0.3rem;
+    /* position: relative; */
+
+}
+
+ p{
+    font-size:"PingFang-SC-Regular";
+    margin-top:  0.4rem;
+    font-size: 0.3rem;
+    color: #333;
+    height: 0.5rem; 
+    line-height: 0.5rem;
+    margin-bottom: 0.4rem;
+   
+}
+p span{
+    display: block;
+    
+}
+ .mt .notice,.mt .nc {   
+    font-size: 0.3rem;
+    color: #333;
+    height: 0.5rem; 
+    line-height: 0.5rem;
+    position: absolute;
+  
+  
+} 
+
+.mt .nc {
+    margin-top:3rem;
+}
+.mt .notice{
+  margin-top: 1.55rem;
+}
+.top{
+    font-size:0.32rem;
+}
+/*count end*/
+
+/*cust-service start*/
+
+.mt{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 0.4rem 0 0.3rem;
+    /* position: relative; */
+
+}
+
+ p{
+    margin-top:  0.4rem;
+    font-size: 0.3rem;
+    color: #333;
+    height: 0.5rem; 
+    line-height: 0.5rem;
+    margin-bottom: 0.4rem;
+   
+}
+p span{
+    display: block;
+    
+}
+/*  .mt .notice{
+
+   margin-top:0.4rem;
+   font-size: 0.3rem;
+   color: #333;
+   height: 0.5rem; 
+   line-height: 0.5rem;
+   position: absolute;
+ 
+ 
+}  */
+/*end */
+
+/*parking start*/
+
+.mt{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 0.4rem 0 0.3rem;
+    /* position: relative; */
+
+}
+
+ p{
+    margin-top:  0.4rem;
+    font-size: 0.3rem;
+    color: #333;
+    height: 0.5rem; 
+    line-height: 0.5rem;
+    margin-bottom: 0.4rem;
+   
+}
+ .mt .notice{
+
+    margin-top:  1.4rem;
+    font-size: 0.3rem;
+    color: #333;
+    height: 0.5rem; 
+    line-height: 0.5rem;
+    position: absolute;
+  
+  
+} 
+.mt .notice01 {
+    margin-top:  2.4rem;
+    font-size: 0.3rem;
+    color: #333;
+    height: 0.5rem; 
+    line-height: 0.5rem;
+    position: absolute;
+  
+}
+
+/*end*/
+
+/*rechange*/
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+
+.head {
+    box-sizing: border-box;
+}
+
+.head span {
+    font-family: serif;
+    font-size: 0.36rem;
+    float: left;
+    display: block;
+}
+
+.head span:nth-of-type(2) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-55%);
+}
+.rec{
+    width: 100%;
+    box-sizing: border-box;
+}
+.rechange {
+    font-family: "PingFang-SC-Regular";
+    
+    font-size: 0.32rem;
+    color: #333;
+    line-height: 0.7rem;
+    border-bottom: 1px solid #ddd;
+    color: #333333;
+}
+
+.article {
+    margin-top: 0.4rem;
+}
+
+.article p {
+    font-weight: 400;
+    font-size: 0.3rem;
+    line-height: 0.5rem ;
+    color: #333;
+    font-family: "PingFang-SC-Regular";
+    margin-bottom: 0.1rem;
+}
+.article p:nth-of-type(5){
+    margin-top: 0.5rem;
+}
+.twophotos{
+    width: 100%;
+    box-sizing: border-box;
+}
+ .pic-p,.pic-z{
+    width: 49.8%;
+}
+
+ .pic-p img,.pic-z img {
+    width: 100%;
+  
+}
+.twophotos .pic-p {
+   float: left;
+}
+.twophotos .pic-z {
+    float: right;
+}
+.twophotos img:nth-of-type(1){
+    margin-right: 0.04rem;
+}
+.back{
+    left:0;
+}
+/*end*/

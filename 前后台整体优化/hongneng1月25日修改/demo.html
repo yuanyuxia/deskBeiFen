@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="valinfo">
+         
+    </div>
+
+<script id="tpl" type="text/html">
+    
+    <% for(var i=0; i<list.length;i++){ %>
+        <div class="container w h730 clearfix">
+            <div class="date fl_l "> <%=list[i].time %></div>
+            <% for(var j=0;j<list[i].data.length;j++){ %>
+                <ul class="container_right fl-r">
+                    <li>
+                        <a href="newsInfo.html"><%=list[i].data[j].title %></a>
+                    </li>
+                    <li><%=list[i].data[j].time %></li>
+                    <li><%=list[i].data[j].info %></li>
+                </ul>
+            <% } %>
+        </div>
+    <% } %>
+</script>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/template.js"></script>
+<script>
+    function getmsg(page){
+        
+        $.ajax({
+            url: '',
+            type: 'get/post',
+            data: { "page": page, "num": 2 },
+            dataType: 'json',
+            success: function (result) {
+                console.log(result);
+                if (result.code == '200') {
+                    // result.msg
+
+                    var html = template($("#tpl").html(), { "list": result });
+
+                    $("#valinfo").append(html);
+                }
+            }
+        });
+
+    }
+   
+
+    getmsg(page+1);
+
+</script>
+
+
+</body>
+</html>

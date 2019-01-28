@@ -1,0 +1,58 @@
+/* 公共头部和地步 */
+
+html,body{
+	width: 100%;
+    box-sizing: border-box;
+
+}
+.w1200{
+	width: 1200px;
+    margin: 0 auto;
+
+}
+.header{
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	height: 100%;
+
+
+	position: absolute;
+	background: url(../Yimages/home_bg.jpg) top center no-repeat;
+
+} 
+
+
+.logo{
+	
+	height: 120px;
+    line-height: 120px;
+}
+.logo img{
+	margin-top: 30px;
+}
+
+.logo .back{
+	display: block;
+	float:right;
+	font-size:24px;
+	color:#fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+  
+/* footer */
+.footer{
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-top: 40px;
+	/* transform: translateX(-50%); */
+	margin-left: -91px;
+}

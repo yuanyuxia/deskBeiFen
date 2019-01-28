@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/city-picker.css">
+</head>
+
+<body>
+    <div class="detail ">
+        <div class="detailWidth">
+            <div class="upPic clearfix">
+                <span class="mainPic fl">广告主图</span>
+                <a href="javascript:;" class="mainImg fl">
+                    <img src="imgs/main.png" alt="">
+                </a>
+            </div>
+            <div class="upPic clearfix">
+                <span class="fuPic">广告附图</span>
+                <a href="javascript:;" class="fuImg fl">
+                    <img src="imgs/fu.png" alt="">
+                </a>
+                <a href="javascript:;" class="fuImg fl">
+                    <img src="imgs/fu.png" alt="">
+                </a>
+            </div>
+
+            <div class="table table_parking">
+                    <div class="tableTop clearfix">
+                        <input type="text" placeholder="请输入停车场名称">
+                        <a href="javascript:;">搜索</a>
+                    </div>
+                    <table border="1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th>
+                                <select id="first-disabled" class="selectpicker referralName" data-hide-disabled="true" data-live-search="true">
+                                    <option>名称</option>
+                                    <option>中原区</option>
+                                    <option>e3</option>
+                                    <option>5</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select id="second-disabled" class="selectpicker referralName" data-hide-disabled="true" data-live-search="true">
+                                    <option>地址</option>
+                                    <option>O3ge</option>
+                                    <option>e3</option>
+                                    <option>5</option>
+                                </select>
+                            </th>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+
+            <div class="upPic clearfix">
+                <span class="fuPic area">广告区域</span>
+                <div class="areaName fl">
+                    <!-- 三级联动 -->
+                    <!-- <div class="city-picker-select"></div> -->
+                    <!-- 可以添加的部分 -->
+                    <p class="etalonAppendBox1">
+                        <input class="fl etalonT1" type="text" placeholder="请输入省份">
+                        <input class="fl etalonT2" type="text" placeholder="请输入市区">
+                        <input class="fl etalonT3" type="text" placeholder="请输入区县">
+                        <label class="etalonLabel">添加</label>
+                    </p>
+                    <p class="etalonAppendBox2">
+                        <!-- 添加的内容区域 -->
+                    </p>
+                </div>
+
+            </div>
+            <div class="upPic clearfix">
+                <span class="fuPic parking">选择停车场：</span>
+                <a href="javascript:;" class="parkingName fl parkingBtn1">
+                    选择停车场
+                </a>
+                <!-- 停车场弹框 -->
+            </div>
+            <div class="table table_referral">
+                    <div class="tableTop clearfix">
+                        <input type="text" placeholder="请输入手机号码">
+                        <a href="javascript:;">搜索</a>
+                    </div>
+                    <table border="1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th>
+                                <select id="third-disabled" class="selectpicker referralName" data-hide-disabled="true" data-live-search="true">
+                                    <option>姓名</option>
+                                    <option>张三</option>
+                                    <option>e3</option>
+                                    <option>5</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select id="last-disabled" class="selectpicker referralName" data-hide-disabled="true" data-live-search="true">
+                                    <option>联系号码</option>
+                                    <option>O3ge</option>
+                                    <option>e3</option>
+                                    <option>5</option>
+                                </select>
+                            </th>
+                        </tr>
+
+                    </table>
+                </div>
+            <div class="upPic clearfix">
+                <span class="fuPic parking  Referral">广告推荐人：</span>
+                <a href="javascript:;" class="parkingName fl parkingBtn2">
+                    选择推荐人
+                </a>
+                <!-- 推荐人弹框 -->
+                
+            </div>
+            <div class="upPic clearfix">
+                <span class="fuPic parking  Referral">广告投入资金：</span>
+                <input type="text" class="ReferralNum">
+            </div>
+            <a href="javascript:;" class="adv">发布广告</a>
+        </div>
+
+    </div>
+
+    <div class="mask1"></div>
+    <div class="mask2"></div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/citydata.js"></script>
+    <script type="text/javascript" src="js/cityPicker-1.0.0.js?v=1"></script>
+    <script type="text/javascript" src="js/detail.js"></script>
+
+</body>
+
+</html>

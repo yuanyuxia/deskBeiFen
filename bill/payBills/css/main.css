@@ -1,0 +1,200 @@
+/* payBill 页面 样式 */
+html,body{background-color:#fff;}
+.parking{width:100%;background-color:#429afa;padding-top:.8rem;padding-bottom:0.5rem;font-family:"MT"}
+.example{font-size:.4rem;color:#fff;padding-left:.5rem;margin:-0.3rem 0 .3rem 0}
+.parkingInfo{background-color:#fff;width:6.5rem;margin:0 auto;border:1px solid #fff;
+    border-radius:.1rem;padding:.4rem .4rem .3rem .4rem}
+.parkingInfo h3{color:#333;font-weight:normal;font-size:.5rem;font-family:"微软雅黑"}
+.parkingInfo p{color:#999;font-size:.28rem;line-height:.5rem}
+.parkingInfo .parkingAdd p{font-size:.3rem}
+.parkingInfo h6{color:#999;font-weight:normal;font-size:.24rem}
+.parkingAdd{margin-bottom:.5rem;background-color:#f6f9f8;margin:-0.42rem -0.42rem .32rem -0.42rem;
+    padding:.32rem .42rem .12rem .42rem;border:1px solid #f6f9f8;border-radius:.1rem}
+.parkingTime p,.money p{margin-bottom:-0.4rem;
+    font-size:.28rem;color:#999}
+.parkingTime span,.money span{font-size:.7rem;color:#429afa;
+    font-family:'MT'}
+@font-face{font-family:'MT';src:url('../font/DINOT-MEDIUM.OTF');src:url('../font/DINOT-MEDIUM.OTF') format('embedded-opentype'),url('../font/DINOT-MEDIUM.OTF') format('woff'),url('../font/DINOT-MEDIUM.OTF') format('truetype'),url('../font/DINOT-MEDIUM.OTF') format('svg')}
+.parkingInfo ul>li{ margin-top: -0.3rem; }
+ .picture_l {width:.5rem;display:inline-block;}
+.picture_l img{width:100%;display: inline-block;}
+ .zhifu,.zhifu{vertical-align:middle;font-size:.3rem;color:#333} 
+.picture_r{display:block;width:.5rem;float:right;margin-right:.1rem;margin-top:.46rem}
+.picture_r img{display:block;width:100%}
+.btn{margin: 0.15rem  auto;width:5.5rem;background-color:#429afa;color:#fff;border:1px solid #429afa;border-radius:.1rem;text-align:center;font-size:.32rem;line-height:.9rem}
+
+/* 底部广告 */
+.footerPic{ width: 100%; height: 2.7rem;     position: relative;}
+ .close{ width: 6%; position: absolute; right: 2%; top: 8%; }
+.close>img{ width: 100%; display: block; margin-bottom: 3%; } .footerPic>img { width: 100%; display: inline-block; }
+
+/* 支付成功页面 */
+.successed{ position: relative; }
+.successed,.bg{ width: 100%; }
+.bg img{ width: 100%; }
+.container{ position: absolute; left: 0; top: 40.4%; }
+.container .data{ width: 3rem; padding-left: 0.3rem; margin: 0 auto; }
+.container .data span{ display: inline-block; color: #e2b573; font-size: 2rem; margin-top: 0.5rem; font-family:'MT'; font-weight: 700; }
+.container .hongbao{ display:block; width: 3.4rem; color: #fff; font-size: 0.3rem; margin: 0.25rem auto; text-align: center; }
+.container a{ display: block; width: 3.26rem; font-size: 0.3rem; height: 0.66rem; line-height: 0.66rem; border-radius: 0.05rem; color:#805239; text-align: center; margin: 0.44rem auto; background-color: #ffcd35; }
+.redLine { display: block; width: 54%; position: absolute; left:24%; top:32%; }
+.redLine img{ width: 100%; }
+
+/* 立即领取页面 */
+.lingqu{
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+}
+.bigPic{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.bigPic img{
+    display: block;
+    width: 100%;
+}
+.getCont{
+    width: 70%;
+    margin: 0 auto;
+ 
+}
+.getCont p{
+    color: #000;
+    font-size: 0.36rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+
+}
+.getCont h3{
+    color: #000;
+    font-size: 0.48rem;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 0.4rem;
+}
+.getCont .getMoney{
+    text-align: center;
+}
+ span{
+    color: #ff0000;
+    font-size: 0.9rem;
+    font-weight: 700;
+   
+}
+span.yuan{
+    font-size: 0.36rem;
+}
+.getBtn{
+
+    display:block;
+    width: 6.9rem;
+    font-size: 0.36rem;
+    color: #fff;
+    text-align: center;
+    background-color: #00a0e9;
+    border-radius: 0.16rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 0.3rem auto;
+}
+
+/*  确认领取页面*/
+.telNum,.confirmNum{
+    width: 100%;
+    margin-top: -2%;
+    position: relative;
+}
+.confirmNum{
+    margin-top: -4%;
+}
+.telNum .telNumPic{
+    position: absolute;
+    left: 4%;
+    top: 52%;
+}
+.telNum .telNumPic img,.confirmNum .eyePic img{
+    display: block;
+   width: 0.36rem;
+}
+.telNum input,.confirmNum input{
+    display: inline-block;
+    width: 100%;
+    height: 1rem;
+    font-size: 0.3rem;
+    color: #999;
+    border: 0;
+    padding-left: 0.9rem;
+}
+.confirmNum .eyePic{
+    position: absolute;
+    left: 4%;
+    top: 58%;
+}
+.confirmNum input{
+    width: 70%;
+}
+ .confirmNum input.checkData{
+    width: 27%;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #fff;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #11befe;
+    margin-top: 5.5%;
+    padding-left: 0rem;
+}
+.confirmBtn{
+    background-color: #429afa;
+}
+.prompt{
+    font-size: 0.28rem;
+    color: #666;
+    margin-bottom: 8.86rem;
+    margin-left: 0.3rem;
+}
+.perfect_mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: rgba(0,0,0,.4);
+    display: none;
+}
+.tankuang{
+    width: 80%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25%;
+    margin-left: -40%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+    z-index: 999;
+    display: none;
+}
+.tankuang p{
+   
+    font-size: 0.36rem;
+    color: #666;
+    text-align: center;
+    margin: 0.4rem;
+}
+.tankuang>.perfect{
+    display: block;
+    width: 2.5rem;
+    background-color: #429afa;
+    color: #fff;
+    text-align: center;
+    height: 1rem;
+    line-height: 1rem;
+    border-radius: 0.1rem;
+    margin: 0 auto;
+    font-size: 0.36rem;
+    font-weight: normal;
+}

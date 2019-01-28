@@ -1,0 +1,143 @@
+body{width:100%;}
+.login{width:100%}
+.login .pic{width:62%;}
+.login .pic img{width:100%;}
+.login_R{width:38%;height:100%;margin:0 auto;margin-top:150px}
+.system{width:294px;height:44px;margin:50px auto}
+.system img{width:100%}.pw{position:relative}
+.account,.pw,.button{width:450px;height:44px;margin:0 auto;margin-bottom:60px}
+.account input,.pw input{width:100%;height:100%;padding-left:30px;border:1px solid #efefef}
+.pw .code{display:inline-block;background-color:#1e65e0;width:100px;height:44px;line-height:44px;color:#fff;text-align:center;position:absolute;top:0;right:0;padding-left:0}
+.button{text-align:center;background-color:#1e65e0;color:#fff;line-height:44px;font-size:18px;cursor:pointer}
+.login_R p{color:#d6d6d6;text-align:center;margin-top:240px}
+@font-face{font-family:'MT';src:url('../font/DINOT-MEDIUM.OTF');src:url('../font/DINOT-MEDIUM.OTF') format('embedded-opentype'),url('../font/DINOT-MEDIUM.OTF') format('woff'),url('../font/DINOT-MEDIUM.OTF') format('truetype'),url('../font/DINOT-MEDIUM.OTF') format('svg')}
+.exit{width:100%;position:relative;}
+.exit>img{
+    display: block;
+     width:100%;
+}
+.exit_nav{position:absolute;top:0;left:0}
+ .exit_nav .bg{margin-top:-10px}
+.exit_nav_l{position:absolute;left:120px;top:20px}
+.exit_nav_l img{z-index:99}
+.exit_nav_r{position:absolute;right:120px;top:24px}
+p span{color:#fff;font-size:16px;margin-right:10px;cursor:pointer}
+p a{display: inline-block;margin-right:40px;}
+p a img{display: inline-block;width: 20px;margin-right:10px;    margin-bottom: 2px;}
+p .tel{margin-right:30px}
+p .tuichu{position:absolute;right:40px;top:2px}
+.exit_cont{widows: 48%;position:absolute;top:20%;left:50%;margin-left: -24%;}
+
+.exit_D{padding-top:20px}
+.exit_time{font-family:"MT";color:#fff;font-size:60px; text-align: center;}
+.exit_dateR,.exit_week{display:block;color:#fff;font-size:16px;font-family:"MT";padding-top:6px}
+.exit_cont .adress{    margin: 20% auto; text-align: center;color:#fff;font-size:20px;font-family:"Microsoft YaHei"}
+/* .exit_cont .exit_shezhi{    margin: 20% auto;} */
+.exit_cont .exit_shezhi a{display:block;width:120px;margin:0 auto;}
+.exit_cont .exit_shezhi a img{width:100%}
+.exit_cont .exit_get{display:block;color:#FFF;margin-top:20px;    text-align: center;}
+/* 选择停车场 */
+.exit .parkingT{ position: absolute;  top:50%; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%);
+    min-width:24%; background-color: #fff; margin-top: -150px; border: 1px solid #fff; border-radius: 5px; display: none; z-index: 88; }
+.exit .parkingT .chooseParking{ border-bottom: 1px solid #e1e1e1; }
+.exit .parkingT .chooseParking .chooseP{ font-size:16px; color: #666; font-weight: 700; margin:16px 20px; }
+.exit .parkingT .chooseParking .closeP{ font-size: 20px; margin-right: 16px; margin-top: 10px; color: #666; }
+.exit .parkingT .chooseCont{ padding: 15px 20px; min-height: 150px; }
+.exit .parkingT .chooseCont .parkingInfo{ line-height: 50px; }
+.exit .parkingT .chooseCont .parkingInfo span{ font-size: 16px; color: #666; margin-right:20px; }
+.exit .parkingT .parkingFooter{ border-top: 1px solid #e1e1e1; padding: 12px 0; }
+.exit .parkingT .parkingFooter .parkingF{ padding-right: 5px; }
+.exit .parkingT .parkingFooter .parkingF .trueP,
+.exit .parkingT .parkingFooter .parkingF .falseP{ border: 1px solid #e1e1e1; width: 80px; text-align: center; border-radius: 25px; line-height: 30px; color: #666; margin-right: 20px; }
+.exit .parkingT .parkingFooter .parkingF .only{border:1px solid #2562cb; background: #2562cb; color: #fff; }
+.tankuang,.tankuang2{position:absolute;width:320px;height:180px;background-color:#fff;left:50%;top:50%;margin-top: -90px;z-index:999;transform:translate(-50%,-50%);display:none;border:1px solid #ddd}
+.tankuang2{z-index:9999}
+.tankuang2 .choose2 .cancel2,.tankuang2 .choose2 .active2{width:50px;height:26px;line-height:26px;color:#fff;padding:0 10px;border:1px solid #494c51;border-radius:50px;z-index:9999;text-align:center;transform:translate(-50%,-50%);background-color:#494c51}
+.tankuang2 .choose2 .active2{background-color:#2562cb;border:1px solid #2562cb;margin-left:70px}
+.close,.close2{width:18px;height:18px;float:right;font-size:28px;margin-right:10px;cursor:pointer; }
+h3{font-size:20px;color:#333;position:absolute;left:50%;top:40%;font-weight:700;transform:translate(-50%,-50%)}
+.tankuang2 h3{font-size:14px}
+.choose,.choose2{width:260px;position:absolute;left:50%;top:80%;transform:translate(-50%,-50%)}
+#Y,.active{background-color:#1e65e0;width:110px;height:38px;line-height:38px;font-size:16px;text-align:center;color:#fff;border-radius:50px}
+.cancel{text-align:center;width:110px;height:38px;line-height:38px;font-size:16px;background-color:#ccc;border-radius:50px}
+.exit_mask{position:absolute;left:0;top:0;width:100%;height:100%;background:#000;background:rgba(0,0,0,.4);display:none}
+.charge_cont{position:absolute;width:54%;border:10px solid #2562cb;top:120px;background-color:#fff;left:23%}
+.charge_cont .charge_nav{width:100%;height:80px;line-height:80px;padding:0 90px}
+.charge_nav ul li{display:inline-block;margin-right:20px;height:36px;line-height:36px;color:#a3a3a3;background-color:#ededed;border-radius:50px;padding:0 30px;cursor:pointer}
+.charge_nav .test{margin-left:100px;color:#fff;background-color:#1e65e0}.line{height:1px;width:100%;background-color:#e9e9e9}
+.charge_nav ul li.on{background-color:#1e65e0;color:#FFF}
+.charge_cont .times{display:none;padding-top:50px }
+.mb32{margin-bottom: 32px;}
+.charge_cont .times .minute input{width:150px;height:40px;border:1px solid #dedede;border-radius:5px;margin:0 10px;padding-left:10px}
+.charge_cont .times .everyday,.charge_cont .times .minute{padding:20px 0;    padding-left: 90px;}
+/* .charge_cont .times .minute{ padding-left: 90px;} */
+.active01{background:url(../imgs/Selected_2.png) no-repeat center}
+.charge_cont .times .everyday a{width:21px;height:20px;margin-right:20px;border:1px solid #a3a3a3;border-radius:5px;vertical-align:middle;background-size:21px 20px}
+.charge_cont .times .everyday input{width:60px;height:40px;border:1px solid #dedede;border-radius:5px;margin:0 10px;text-align:center}
+.setTime{padding-top:20px ;display:none}
+.setTime .setTimeCont{margin-bottom:23px;}
+.setTime .setL{margin-left:50px; }
+.setTime .setR{margin-right:50px; }
+.setTime .minute1,.standard .minute1,.dayNight .minute1{line-height:70px}
+.setTime .minute1 input,.standard .minute1 input,.dayNight .minute1 input{height:40px;vertical-align:middle;border:1px solid #dedede;border-radius:5px;margin-right:20px;padding-left:20px}
+.setTime .minute1 .free1,.standard.minute1 .free1,.dayNight .minute1,.free1{margin-right:40px}
+.setTime .minute1 .free2,.standard.minute1 .free2,.dayNight .minute1,.free2{margin-right:96px}
+.setTime .everyday1 a,.standard .everyday1 a,.dayNight .everyday1 a{width:21px;height:20px;margin-right:20px;border:1px solid #dedede;border-radius:5px;vertical-align:middle;background-size:21px 20px}
+.standard .setL,.standard .everyday1{display:inline-block;     margin-bottom: 20px;   margin-left: 50px;}
+.standard .everyday1{margin-left:70px}
+.setTime .everyday2{text-align:right}
+.setTime .everyday2 a{width:21px;height:20px;margin-right:20px;border:1px solid #dedede;border-radius:5px;vertical-align:middle;background-size:21px 20px}
+.setTime .setR{border:1px solid #dedede;padding:10px 40px}
+.setTime .setR ul li{line-height:60px;text-align:right}
+.setTime .setR ul li span{margin-right:30px;line-height:60px}
+.setTime .setR ul li input{height:34px;border:1px solid #dedede;border-radius:5px;width:100px}
+.dayNight{padding-top:39.5px ;display:none}
+.dayNight .setL{margin-left: 50px;}
+.dayNight_R table{border-color:#dedede;margin-right: 50px;}
+.dayNight_R table tr {height:40px}
+.dayNight_R table tr td input{ height:40px;border: none;text-align: center;}
+.dayNight_R table tr:nth-child(1),.dayNight_R table tr td:nth-child(1){background-color:#eaeaea}
+.dayNight_R table tr th,.dayNight_R table tr td{text-align:center}
+.dayNight .dayNightC{width:16px;margin:11.1% auto;    margin-left: -20px;}
+.dayNight .yuan{margin-left:-4px}
+.standard{padding-top:12.5px;}
+.standard .hours{padding:10px 0;     margin-bottom: 30px;   margin-left: 50px;}
+.standard .hours .dayNightC{width:180px}
+.standard .hours .dayNightC,.standard .hours .houesR{display:inline-block}
+.standard .hours .houesR{margin-left:180px;margin-top:-35px}
+.standard .hours .houesR ul li{width:126px;display:inline-block;line-height:60px}
+.standard .hours .houesR ul li span{text-align:left;    color: #666;}
+.standard .hours .houesR ul li .distance{margin-right:8px;    color: #666;}
+.standard .hours .houesR ul li input{text-align:center;width:50px;height:30px;border:1px solid #dedede;border-radius:5px;margin-left:6px}
+.testGet{position:absolute;left:25%;top:20%;width:50%;background-color:#fff;display:none;z-index:99}
+.testGet .testTop{background-color:#1e65e0;color:#fff;text-align:center;padding:20px 0;font-size:18px}
+.testGet .testCenter{margin-left:50px}
+.testGet .testCenter ul li{height:70px;line-height:70px}
+.testGet .testCenter .tpg{height:55px;line-height:55px}
+.testGet .testCenter ul li .testEnter{margin-right:20px;font-size:18px}
+.testGet .testCenter ul li .DateTime{border:1px solid #dedede;height:40px;border-radius:5px;vertical-align:middle;line-height:40px;}
+.testGet .testCenter ul li .DateTime input{padding: 0 15px; line-height:40px;font-size:18px; border:none;}
+.testGet .testCenter ul li .DateTime .DateTime1,.testGet .testCenter ul li .DateTime .DateTime2{margin:0 15px;font-size:18px}
+.testGet .testCenter ul li .testParking{font-size:18px}
+.testGet .testCenter ul li .test1{display:inline-block;margin-left:40px;font-size:20px;color:#1e65e0}
+.testGet .testBottom{border-top:1px solid #a3a3a3;padding:20px 0;text-align:center}
+.testGet .testBottom span{border:1px solid #1e65e0;border-radius:50px;background-color:#1e65e0;padding:5px 20px;margin:0 20px;color:#fff}
+.testGet .testBottom .testBack{background-color:#494c51;border:1px solid #494c51}
+.footer{width:100%}
+ .overtime{padding:30px 90px;background-color:#dedede}
+.overtime ul li{display:inline-block;margin-right:20px}
+.overtime ul li span{vertical-align:middle}
+.overtime .overT{font-size:18px}
+.overtime .empty{border:1px solid #dedede;width:90px;height:30px;margin-top:10px;background-color:#fff;margin:0 6px;border-radius:5px}
+
+.footer .bt{float:right;padding:20px 90px}
+.footer .bt .bt1,.footer .bt .bt2{width:80px;height:34px;text-align:center;line-height:34px;color:#fff;border:1px solid #2562cb;border-radius:50px;background-color:#2562cb}.footer .bt .bt1{margin-right:40px}.footer .bt .bt2{background-color:#494c51;border:1px solid #494c51}
+.footer .bt .bt1,.footer .bt .bt2,
+.charge_nav ul li,p span,
+.tankuang2 .choose2 .cancel2,
+.tankuang2 .choose2 .active2,
+.choose div,.testGet .testBottom .testBack,
+.testGet .testBottom .testCount,
+.parkingFooter .trueP,.parkingFooter .falseP,
+.chooseParking .closeP  
+{cursor:pointer;}

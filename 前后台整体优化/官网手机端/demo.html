@@ -1,0 +1,275 @@
+<!DOCTYPE html>  
+<html xmlns=" http://www.w3.org/1999/xhtml">  
+<head>
+<title>JS判断设备类型，应用不同css文件</title>
+<!-- <link rel="stylesheet" type="text/css" href="style_A.css" /> -->
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+<!-- 
+    <link rel="stylesheet" href="./cssMobile/base.css">
+    <link rel="stylesheet" href="./mui/css/mui.min.css">
+    <link rel="stylesheet" href="./cssMobile/main.css">
+    <link rel="stylesheet" type="text/css" href="./font/iconfont.css"> -->
+
+    <link href="./imgs/favicon.ico" rel="shortcut icon">
+</head>  
+<body>
+ 
+<div>
+        <div class="toTop">
+                <span class="iconfont icon-xiangshangjiantou1"></span>
+            </div>
+            <div class="index_head ">
+                <!-- 公共头部和底部 -->
+                <!-- 头部开始 -->
+                <div id="overlay">
+                    <div class="clearfix">
+                        <div class="nav_hd clearfix">
+                            <div class="nav_logo fl_l">
+                                <a href="index.html">
+                                    <img src="./imgs/logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="iconfont icon-tubiao13 nav_icon fl_r"></div>
+                        </div>
+        
+                        <div class="small">
+                            <div class="small_nav">
+                                <ul>
+                                    <li class="default">
+                                        <a href="index.html">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="./product.html">APP</a>
+                                    </li>
+                                    <li>
+                                        <a href="productCard.html">产品</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html">新闻</a>
+                                    </li>
+                                    <li class="lw">
+                                        <a href="aboutUs.html">关于我们</a>
+                                    </li>
+                                    <li class="lw">
+                                        <a href="contactUs.html">联系我们</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 大屏导航栏  -->
+                        <div class="nav clearfix">
+                            <!-- 头部导航栏 左边logo 部分 -->
+                            <div class="nav_l fl_l">
+                                <a href="index.html">
+                                    <img src="./imgs/logo.png" alt="">
+                                </a>
+                            </div>
+                            <!-- 头部导航栏右边导航部分 -->
+                            <div class="nav_r clearfix fl_r">
+                                <ul class="clearfix">
+                                    <li class="default">
+                                        <a href="javascript:;">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="./product.html">APP</a>
+                                    </li>
+                                    <li>
+                                        <a href="./productCard.html">产品</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html">新闻</a>
+                                    </li>
+                                    <li class="lw">
+                                        <a href="aboutUs.html">关于我们</a>
+                                    </li>
+                                    <li class="lw">
+                                        <a href="contactUs.html">联系我们</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 小屏导航栏 -->
+        
+        
+                    </div>
+                    <!-- 头部结束 -->
+        
+                    <!-- banner start -->
+        
+                    <div class="banner_home">
+                        <div class="banner_paring w">
+                            <h2> 停车无忧 &nbsp;&nbsp;一手掌控</h2>
+                            <p>呦呦车位APP让您的生活更轻松</p>
+                            <a href="contactUs.html">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+ 
+<script type="text/javascript">
+ 
+var browser={
+    versions:function(){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        //移动设备浏览器版本信息
+        return {
+            //IE内核
+            trident: u.indexOf('Trident') > -1,
+            //opera内核      
+            presto: u.indexOf('Presto') > -1,
+            //苹果、谷歌内核          
+            webKit: u.indexOf('AppleWebKit') > -1,
+            //火狐内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+            //是否为移动终端
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), 
+            //ios终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+            //android终端或者uc浏览器
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, 
+            //是否为iPhone或者QQHD浏览器
+            iPhone: u.indexOf('iPhone') > -1 , 
+            //是否iPad           
+            iPad: u.indexOf('iPad') > -1,
+            //是否web应该程序，没有头部与底部
+            webApp: u.indexOf('Safari') == -1
+        };
+    }(), 
+    language:(navigator.browserLanguage || navigator.language).toLowerCase()  
+}   
+   
+if(browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad){    cssChange();     
+}  
+ 
+function cssChange(){
+    var link = document.getElementsByTagName('link')[0];
+    link1 = document.getElementsByTagName('link')[1]; 
+    link2 = document.getElementsByTagName('link')[2];
+     link3 = document.getElementsByTagName('link')[3];
+    
+    
+    //PC端应用的样式文件：./css/base.css
+  //  alert('当前应用样式文件是：'+link.getAttribute('href'));
+
+    link.setAttribute('href','./cssMobile/base.css');
+    link1.setAttribute('href','./mui/css/mui.min.css');
+    link2.setAttribute('href','./cssMobile/main.css');
+    link3.setAttribute('href','./font/iconfont.css');
+
+    //Mobile端应用样式文件：style_B.css
+  //  alert('当前应用样式文件是：'+link.getAttribute('href'));
+}
+  /**
+         * 判断是够是pc设备
+         */
+         function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (window.screen.width >= 768) {
+                flag = true;
+            }
+            return flag;
+        }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>  
+
+</html>
+
+
+/* 
+   
+1
+    (function browserRedirect(){
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == 'ipad';
+      var bIsIphone = sUserAgent.match(/iphone os/i) == 'iphone os';
+      var bIsMidp = sUserAgent.match(/midp/i) == 'midp';
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == 'rv:1.2.3.4';
+      var bIsUc = sUserAgent.match(/ucweb/i) == 'web';
+      var bIsCE = sUserAgent.match(/windows ce/i) == 'windows ce';
+      var bIsWM = sUserAgent.match(/windows mobile/i) == 'windows mobile';
+	  var bIsAndroid = sUserAgent.match(/android/i) == 'android';
+
+      if(bIsIpad || bIsIphone || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM || bIsAndroid ){
+        window.location.href = 'http://m.itheima.com';
+      }
+    })();
+2
+    (function () {
+    var url = location.href;
+    // replace www.test.com with your domain
+    if ( (url.indexOf('www.test.com') != -1) && navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i) ) {
+        var newUrl = url.replace('http://www', 'http://m');
+        location.href = newUrl;
+    }
+})();
+
+3
+//pc端作判断
+
+    if (/mobile/i.test(navigator.userAgent)) {
+        window.location = 'http://xxxx/mobile.html'
+    }
+
+
+
+//移动端端作判断
+
+    if(!/mobile/i.test(navigator.userAgent)){
+        window.location = 'http://xxxx/pc.html';
+    }
+    4// */
+       /**
+     * 判断是够是pc设备
+     */
+  /*   function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        if(window.screen.width>=768){
+             flag = true;
+        }
+        return flag;
+    }
+
+    //5
+    var isMobile = false;//默认PC端
+function mobile() {
+    try{
+        document.createEvent("TouchEvent");
+        return true;
+    }
+    catch(e){
+        return false;
+    }
+}
+isMobile=mobile();

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>全选</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 500px;
+            margin: 200px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* border-spacing: 0;
+            
+            他在默认border-collapse:separate;时 才生效
+             */
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+  
+    <script>  
+        $(function(){
+             //1  点击全选 同时选中所有单选
+            //先获取全选按钮 注册点击事件 点击时让下面的复选框同时选中
+            //再获取所有复选框的选中状态和当前全选的选中状态保持一致
+            $("#All").click(function(){
+                var  cked = $(this).prop("checked");//保存当前全选按钮的选中状态；
+                //在获取tbody中所有复选框 给他们设置选中状态；
+                $("#tb").find(":checkbox").prop("checked",cked);
+            });
+            //2 选中所有单选 同时也选中全选
+            $("#tb").find(":checkbox").click(function (){
+                //先获取所有单选的个数
+                var length1 = $("#tb").find(":checkbox").length;
+                //再获取所有单选框中被选中的个数
+                var length2 = $("#tb").find(":checked").length;
+                //二者进行比较 如果相等 就让全选被选中 否则不选中
+                // length1 ==length1 有一个单选被选中 也让全选按钮选中
+                if( length1 ==length2 || length1 ==length1){
+                    //都选中是 设置属性值为true 全选被选中
+                    $("#All").prop("checked",true);
+
+                }else{
+                    $("#All").prop("checked",false);
+                };
+            });
+        });  
+    </script>
+</head>
+
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="All" />
+            </th>
+            <th>123123</th>
+            <th>公司名称</th>
+        </tr>
+        </thead>
+
+        <tbody id="tb">
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>11111</td>
+            <td>宏能科技</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>1222222</td>
+            <td>宏能科技</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>3333333</td>
+            <td>宏能科技</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>444444</td>
+            <td>宏能科技</td>
+        </tr>
+     
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

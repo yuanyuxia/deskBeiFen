@@ -1,0 +1,56 @@
+body, div, ul, ol, li, p, i, em, h1, h2, h3, h4, a, strong, span, img, form, input, textarea, button{
+	padding: 0;
+	margin:0;
+}
+body{
+	font-family:"PingFang-SC-Regular";
+	font-size: 14px;
+	line-height: 24px;
+}
+
+input, textarea{
+	outline: none;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	
+}
+img{
+	border: 0;
+}
+.pr{
+	position: relative;
+}
+.pa{
+	position: absolute;
+}
+.pf{
+	position: fixed;
+}
+.f-l{
+	float: left;
+}
+.f-r{
+	float: right;
+}
+li, div, ul{
+	*zoom:1;
+}
+li:after, div:after, ul:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.clearfix::before,.clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    *zoom:1;
+}

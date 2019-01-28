@@ -1,0 +1,113 @@
+
+/* 全部头部 */
+html,body{
+	width: 100%;
+	height: 100%;
+
+}
+.login{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: url(../Yimages/bg.jpg) top center no-repeat;
+}
+.logo{
+	position: absolute;
+	left: 80px;
+	top: 25px;
+
+}
+	
+
+/**login style**/
+
+
+.login-box{
+	position: absolute;
+	height: 428px;
+    left: 50%;
+	top: 50%;
+	/* transform: translate(-50%, -50%); */
+	margin-top: -214px;
+	margin-left: -278px;
+	background: #fff;
+	border: 8px solid #35469a;
+}
+ .title {
+	 width: 540px;
+	 height: 74px;
+	 border-bottom: 1px solid #eff4f4;
+ }
+.title img{
+	display: block;
+	margin: 30px auto; 
+}
+
+
+ .login-con input{
+	margin: 10px 40px;
+} 
+.login-box .form-group{
+	margin-top: 20px;
+	position: relative;
+}
+
+.login-box input, .signup-form{
+	width: 460px;
+	height: 50px;
+	line-height: 48px \9;
+	padding-left: 70px;
+	border: 1px #d9d9d9 solid;
+	border-radius: 5px;
+	font-size: 14px;
+	box-sizing:border-box;
+	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	transition:all 0.3s ease-out;
+	-webkit-transition:all 0.3s ease-out;
+	-moz-transition:all 0.3s ease-out;
+}
+
+ .form-group img{ 
+	position: absolute;
+	top: 18px;
+	left: 60px;
+
+} 
+.login-box button{
+	width: 460px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	border: 0;
+	background-color: #d8d8d8;
+	color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	left: 30px;
+	margin: 10px;
+}
+.login-box button a{
+	display: block;
+}
+
+
+.error-notic{
+	color: #ff4e00;
+	display: block;
+	position: absolute;
+	left: 60px;
+}
+
+
+/* footer */
+.footer{
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	/* transform: translateX(-50%); */
+	margin-left: -91px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .onav{
+            width: 500px;
+            margin: 100px auto;
+        }
+        ul{
+            list-style: none;
+        }
+        .onav > li{
+            float:left;
+            padding: 0 20px;
+            border:1px solid #ccc;
+            position: relative;
+            height: 30px;
+            line-height: 30px;
+        }
+        .tnav{
+            position: absolute;
+            left: 0;
+            top:30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn1">显示</button>
+    <button class="btn2">隐藏</button>
+    <span>
+        在吗？
+    </span>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(".btn1").click(function(){
+        $("span").show();//显示
+    })
+    $(".btn2").click(function(){
+        $("span").hide();//隐藏
+    })
+
+//     $("").click(function(){
+//         $("").hide();
+//         $("").show();
+//     }) 
+
+</script>
+</html>

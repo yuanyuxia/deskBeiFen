@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="text/javascript" src="../../libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/base.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+</head>
+
+<body>
+    <div class="login">
+        <div class="bgt">
+            <img src="../../images/static/login_bg1.jpg">
+        </div>
+        <div class="loginHeader divshadow">
+            <div class="loginHeaderCon ">
+                <a href="index.html">
+                    <img src="../../images/static/logo_images.png" />
+                </a>
+            </div>
+        </div>
+        <div class="loginCont">
+            <h2 class="loginTitle">登录</h2>
+            <div class="loginConForm">
+                <form>
+                    <div class="loginDiv loginNum">
+                        <label></label>
+                        <input type="text" placeholder="请输入手机号">
+                    </div>
+                    <div class="loginDiv loginPsd">
+                        <label></label>
+                        <input type="password" placeholder="请输入密码">
+                    </div>
+                    <div class="loginForget clearfix">
+                        <a class="loginForgetA1">忘记密码？</a>
+                        <a class="loginForgetA2" href="regist.html">立即注册</a>
+                    </div>
+                    <div class="loginBtn">
+                        <a href="index.html">登录</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="footer">
+            <a>©宏能网络科技有限公司</a>
+        </div>
+
+    </div>
+
+    <div class="mask"></div>
+    <!--页脚-->
+
+    <script type="text/javascript">
+        // 遮罩
+        $(function () {
+            $(".loginBtn").on("click", function (e) {
+                    $(this).find(".mask").css({
+                        "display": "block"
+                    });
+                   
+                });
+
+                $(".mask").click(function () {
+                  
+                    $(".mask").css({
+                        "display": "none"  
+                    });
+                })
+
+        })
+
+
+        $(function () {
+           // 失去焦点输入框变色
+            for (var i = 0; i < $("form .loginDiv input").length; i++) {
+                $("form .loginDiv input").focus(function () {
+                    $(this).parents(".loginDiv").css("border", "1px solid #dc3336");
+                });
+                $("form .loginDiv input").blur(function () {
+                    $(this).parents(".loginDiv").css("border", "1px solid #ddd");
+                });
+            }
+
+        }); 
+
+     
+    </script>
+</body>
+
+</html>

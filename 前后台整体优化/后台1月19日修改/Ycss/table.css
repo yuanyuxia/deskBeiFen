@@ -1,0 +1,134 @@
+.center {
+    position: relative;
+    height: 880px;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    top: 0px;
+    left: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.center-t {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.center-t span {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.bt {
+    float: right;
+    height: 32px;
+    margin-top: 9px;
+    margin-right: 30px;
+}
+
+.bt a {
+    display: block;
+    color: #666;
+    text-align: center;
+    line-height: 32px;
+    font-weight: normal;
+}
+
+.bt a {
+    text-decoration: none;
+}
+
+
+/* 按钮 */
+
+.check,
+table {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 60px;
+}
+
+button {
+    width: 72px;
+    height: 30px;
+    color: #666;
+    font-style: 12px;
+}
+
+#bt1 {
+    /* width: 72px; */
+    margin-right: 10px;
+}
+
+#bt2 {
+    width: 54px;
+}
+
+table tr th {
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    text-align-last: left;
+    background-color: #f2f2f2;
+    font-weight: normal;
+}
+
+table input {
+    background-color: #0088fe;
+}
+
+table tr:nth-of-type(2n) {
+    border: 1px slolid #ddd;
+    height: 60px;
+    color: #333;
+    text-align: left;
+}
+
+table tr td:nth-last-of-type() {
+    color: #0088fe;
+}
+
+.page {
+    position: relative;
+    top: 10px;
+    width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.page button {
+    box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: none;
+    float: left;
+}
+
+.page button:hover {
+    background-color: #bbb;
+}
+
+
+/* 把底部进行更改 */
+
+.footer {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

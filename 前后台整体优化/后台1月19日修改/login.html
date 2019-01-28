@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>登录</title>
+	<!-- <link rel="stylesheet" href="./Ycss/common.css"> -->
+	<link rel="stylesheet" href="./Ycss/login.css">
+    <link rel="stylesheet" href="./Ycss/base.css">
+
+</head>
+
+<body>
+<div class="login">
+    <!-- 公共头部 -->
+    <div class="logo">
+        <a href="javascript:;"><img src="./Yimages/LOGO.png" alt=""></a>
+    </div>   
+    
+    <!-- 登录模块 -->
+	<div class="login-box">
+			<div class="login-con ">
+                <div class="title">
+                  <a href="javascript:;"><img src="./Yimages/biaoti.png" alt=""></a>
+                </div>
+				<div class="form-group">
+
+					<input type="text" id="tel" placeholder="账号" />
+                    <img src="./Yimages/account.png" alt="">
+					<span class="error-notic">手机号码不正确</span>
+
+				</div>
+
+				<div class="form-group">
+
+					<input type="password" id="pwd" placeholder="密码">
+                      <img src="./Yimages/Password.png" alt="">
+					<span class="error-notic">密码不正确</span>
+
+				</div>
+
+				<div class="form-group">
+
+					<button type="submit"  id="btn" disabled="disabled" >
+						<a href="javascript:;" >登录</a>
+					</button>
+				</div>
+			</div>
+		
+    </div>
+
+    <!--公共底部 -->
+  <div class="footer">
+      <p><span>©</span>河南宏能网络科技有限公司</p>
+  </div>
+
+</div>
+    
+<script src="./Yjs/jquery.js"></script>
+<script>
+
+
+    $(function () {
+        $(".form-group input").on('change',function () {      
+            var tel = $("#tel").val();
+            var pwd = $("#pwd").val();
+            if(tel != ''&& pwd != ''){
+                $("#btn").attr("disabled",false);
+                $("#btn").css("background-color","#5972f0");
+            }else{
+                $("#btn").attr("disabled", true);
+            }
+        });
+
+        $("#btn").on('click',function(){
+            alert("登录")
+        })
+     
+    });
+
+
+    
+
+ /*    // 判断浏览器是否支持placeholder属性
+    function isSupportPlaceholder() {
+        var input = document.createElement('input');
+        return 'placeholder' in input;  
+        }
+      
+    // jQuery替换placeholder的处理
+    function input(obj, val) {
+        var $input = obj;
+        var val = val;
+        $input.attr({ value: val });
+        $input.focus(function () {
+        if ($input.val() == val) {
+            $(this).attr({ value: "" });
+        }
+    }).blur(function () {
+        if ($input.val() == "") {
+            $(this).attr({ value: val });
+        }
+    });
+} */
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            height: 2000px;
+            width: 100%;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <span>底部</span>
+    <div></div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+    $("span").click(function () {
+        $('html').animate({
+            scrollTop: $('html').height()
+        },1000);
+    })
+</script>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+  1  登陆页：提示信息显示在输入框左下方
+    服务器上的提示信息
+         position: absolute;
+         left: 35px;
+         top:70px;
+
+   本地修改：  login.css
+                 position: absolute;
+                 left: 60px;      
+  2 解决新闻列表 删除后 高度不变形
+  publish.html 51行 加一个父盒子 .data 
+  pub-info.css 48行 .data {
+                            min-height: 610px;
+                        }
+
+   3 新闻页 添加点击首页推荐  点击撤销推荐 切换文字与样式高亮效果
+   news.html 37行  添加结构 <div class="write_b">
+                                 <div class="btn1">点击首页推荐</div>  
+                            </div>
+
+           new.css 54行 
+             .write .box1{
+            margin-bottom: 30px;
+        }
+        .write .btn1 {
+           color: #999;
+            cursor: pointer;
+            width: 140px;
+            height: 38px;
+            line-height: 38px; 
+            text-align: center;  
+            background-color: #fff;
+            border:1px solid #ddd;
+            display: inline-block;
+        }
+        .write_b{
+            width: 950px;
+            margin: 0 auto;
+          
+        }
+        .write .write_b .btn1{
+            position: relative;
+            top: 0;
+            left: 50%;
+            margin-left: -70px;
+        } 
+
+
+        .write_b .cur{
+           
+            border:1px  solid #0088fe;
+            background:  url(../Yimages/Selected.png) bottom right  no-repeat;
+        }
+
+new.html 56行 js内容点击切换功能实现
+<script type="text/javascript">
+      $(function(){
+          //假设获取它当前默认为显示
+          var isShow = true;
+          //点击当前显示内容 让他切换成撤销和添加高亮样式
+          $(".btn1").on("click",function(){
+            if(isShow){
+                $(this).text("撤销推荐").addClass('cur');
+            }else{
+                $(this).text("点击首页推荐").removeClass('cur');
+            }
+            isShow = !isShow;
+          })
+      })
+</script>
+   
+  4 服务器富文本插件高度调整
+
+    news.css 
+
+         3行      height：760px;
+         105行    top：690px ;
+
+    本地富文本插件不同  正常显示 不做修改
+
+
+   5  全选与反选的功能实现 背景图片结构样式替换
+       publish.html 38行---41行 
+           &ltbutton  class="checkAll"&gt
+                    <!-- <input type="checkbox" id="bt1" /> -->
+                    <span class=" checkAllItem " ></span>
+                    <a href="javascript:;">全选</a>
+
+    所有td里面的 input内容换成 <span class="checkItem active" style="margin-right: 10px;"></span>
+
+    pbu-info.css 48---76行：
+
+    .data{
+    min-height:610px;
+}
+
+.checkAllItem{
+    display:inline-block; 
+    width: 16px;
+    height: 16px;
+    background: url(../Yimages/Unchecked_1.png) no-repeat center;
+    vertical-align: middle;
+     position: relative;
+    top: -2px;
+    left: 2px;
+}
+
+.checkItem{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../Yimages/Unchecked_1.png) no-repeat center;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    left: 36px;
+}
+
+ .active01{
+      background: url(../Yimages/Selected_2.png) no-repeat center;
+}
+  
+      
+js功能实现
+<script type="text/javascript">
+      $(function(){
+        //1 先设置单选项 选中何不选中切换效果
+        $(".checkItem").on("click",function(){
+            $(this).toggleClass("active01");
+        });
+        //2 再设置全选按钮 切换全选 和全不选 
+        $(".checkAllItem").on("click",function(){
+            $(this).toggleClass('active01');//实现切换全选按钮 全选 和全不选
+            //当全选按钮切换到全不选时 让所有单选项移除样式  实现所有单选项都不选中
+            $(".checkItem").removeClass('active01');
+        });
+        //3 点击全选 让所有单选项也同步选中
+        $(".checkAllItem").on("click",function(){
+            for(var i = 0; i < $("checkItem").length; i++){
+                if($(".checkAllItem").hasClass('active01')){
+                    $(".checkItem").addClass('active01');
+                }else{
+                    $(".checkItem").removeClass('active01');
+                }
+            }
+        });
+        //4 点击所有单选项 也让全选按钮选中
+        $(".checkItem").on("click",function(){
+            for(var i = 0; i <$(".checkItem").length; i++){
+                //  当单选项被选中的个数 等于所有单项的个数时 给全选按钮追加选中样式
+                if($(".checkItem.active01").length == $(".checkItem").length){
+                    $(".checkAllItem").addClass('active01');
+                }else{
+                    $(".checkAllItem").removeClass('active01');
+                }
+            }
+        })
+      })
+
+
+
+</script>
+
+ 6 分页的结构样式
+   publish.html 165行
+    <div class="page">
+                <div class="fr">
+                         <span><a>首页</a></span>
+                         <span><a>上一页</a></span>
+                         <a class="on">1</a>
+                         <a>2</a>
+                         <a>3</a>
+                         <a>4</a>
+                         <span>...<a>下一页</a></span>
+                         <span><a>尾页</a></span>
+                         <span>共12页</span>
+                         <span>到第</span>
+                         <input  type="text" value="1" />
+                         <span>页</span>
+                         <span><a>确定</a></span>
+                    </div>
+
+      </div>
+
+    pub-info.css 145行 
+
+       .page {
+    position: relative;
+    top: -35px;
+    float:right;
+    overflow: hidden;
+    margin-right: 60px;
+    color:#666;
+}
+.page span a{
+    display: inline-block;  
+    border: 1px solid #ddd;
+    background: #FFFFFF;
+}
+.page a.on,
+.page span a:hover,
+.page a:hover{
+    background-color: #0088fe;
+    color: #fff;
+    border: 1px solid #0088fe; 
+}
+.page a,.page span a{
+    padding: 6px 15px;
+    margin: 0px 3px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+.page .fr input{
+    width: 38px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: center; 
+    color:#000;
+}
+
+
+
+7 查看弹窗 
+   添加 处理结果 内容和样式  
+   pop-up.html 43行 ---- 56行
+                 <div class="result">
+                        <h4>处理结果</h4>
+                        <p>该客户已电话回访，星期天确定来公司实地考察，做好接待工作</p>
+                    </div>
+                    <div class="require">
+                        <h4>他的需求以及建议:</h4>
+                        <p>我对你们的项目很感兴趣希望能和你们合作一下，投资资金不是问题</p>
+                    </div>
+                    <!-- 联系方式 -->
+                    <div class="callme">
+                        <h4>联系方式</h4>
+                        <p>
+                            <span>电话 11111111111111</span>
+                            <span>邮箱 11111111111111</span>
+                    </div>
+pop-up.css  13行  去掉高度   width：480px;
+49-70行：
+   .require p,.callme p {
+    
+      margin-top:10px;
+      font-size: 14px;
+      color: #333;
+  }
+  .result p{
+    color: #d142fa;
+  }
+  .tanchukuang  .del{
+      cursor: pointer;
+  }
+
+  .result{
+    margin-top: 15px;
+  }
+  .callme{
+      margin-bottom: 30px;
+  }
+.callme p span{
+  display: block;
+}
+
+</body>
+</html>

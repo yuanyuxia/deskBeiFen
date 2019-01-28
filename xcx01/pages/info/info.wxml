@@ -1,0 +1,34 @@
+<!--pages/info/info.wxml-->
+<view class='info'>
+     <swiper  indicator-dots="true" autoplay = "true" interval="2000" duration = "1000" circular="true" bindtap = "messageTap">
+            <swiper-item> 
+                  <image src='/images/banner1.png' ></image>
+            </swiper-item> 
+            <swiper-item> 
+                  <image src='/images/banner2.png' ></image> 
+            </swiper-item>
+            <swiper-item> 
+                  <image src='/images/banner6.png' ></image>
+            </swiper-item>    
+     </swiper>
+<!--新闻部分  -->
+   <view class='info-cont'>
+      <view class='info-head'>
+        
+        <text>Nov 25 2016 </text>
+      </view>
+      <text>图文并茂</text>
+     
+      <text>犹记得那年我们都还很年幼，而如今琴声幽幽我的等候你没听过
+      犹记得那年我们都还很年幼，而如今琴声幽幽我的等候你没听过
+      犹记得那年我们都还很年幼，而如今琴声幽幽我的等候你没听过
+      犹记得那年我们都还很年幼，而如今琴声幽幽我的等候你没听过</text>
+      <view>
+          
+           <text>已售90双</text>
+           
+           <text>已售80双</text>
+      </view>
+   </view>
+
+</view>

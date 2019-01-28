@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新闻中心</title>
+<link rel="stylesheet" type="text/css" href="./Ycss/bootstrap.css"> 
+<link href="./Ycss/summernote.css" rel="stylesheet"/>
+<link rel="stylesheet" href="./Ycss/common.css">
+<link rel="stylesheet" href="./Ycss/news.css">
+<script src="./Yjs/jquery-1.11.1.min.js"></script>
+<script src="./Yjs/bootstrap.js"></script> 
+<script src="./Yjs/summernote.js"></script>
+<script src="./dist/lang/summernote-zh-CN.js"></script>    <!-- 中文-->
+
+</head>
+
+<body>
+<div class="header">
+      <!--有版心的公共头部  -->
+    <div class="head w1200">
+        <div class="logo">
+            <a href="javascript:;" ><img src="./Yimages/LOGO.png" alt=""></a>
+            <a href="index.html" class=" back">返回主页</a>
+        </div> 
+   </div>
+
+
+    <!-- 富文本 -->
+    <div class="center w1200">
+        <div class="center-t">
+           <span >新闻中心</span>
+           <span class="bt "><a href="javascript:;">返回</a></span>
+        </div>
+        <div class="write">
+            <input type="text" class="box1" placeholder="请输入标题、不超过20个字符">    
+            
+            <div class="write_b">
+                  <div class="btn1">点击首页推荐</div>  
+            </div>
+        </div>
+        <div class="sn">		
+            <div class="summernote">在这里编辑内容</div>	
+        </div>
+        <div class="center-b">
+                <span class="newssuccess">点击发布后 用户就能看到您的新闻了</span>
+                <span class="btb "><a href="Javascript:;">发布</a></span>
+        </div>
+    </div>
+      <!--公共底部 -->
+    <div class="footer">
+        <p><span>©</span>河南宏能网络科技有限公司</p>
+    </div>
+
+</div>
+
+    <script>
+        $(function(){
+         $('.summernote').summernote({
+                height: 210,
+                tabsize: 2,
+                lang: 'zh-CN'
+            });
+        });
+
+
+        //点击推荐 切换效果
+        $(function(){
+            var isShow = true;
+            $('.btn1').on('click',function(){
+                if(isShow){
+                    $(this).text('点击撤销推荐').addClass('cur');
+                }else{
+                    $(this).text('点击首页推荐').removeClass('cur');
+                }
+                isShow = !isShow;
+            }); 
+        })
+
+        
+
+
+
+ 
+        </script>
+</body>
+</html>

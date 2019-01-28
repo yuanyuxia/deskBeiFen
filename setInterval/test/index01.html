@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+<script src="js/jquery.min.js"></script>
+<!--<script type="text/javascript"> 
+function invokeSettime(obj){
+    var countdown=60;
+    settime(obj);
+    function settime(obj) {
+        if (countdown == 0) {
+            $(obj).attr("disabled",false);
+            $(obj).text("获取验证码");
+            countdown = 60;
+            return;
+        } else {
+            $(obj).attr("disabled",true);
+            $(obj).text("(" + countdown + ") s 重新发送");
+            countdown--;
+        }
+        setTimeout(function() {
+                    settime(obj) }
+                ,1000)
+    }
+}
+
+  new invokeSettime("#btn");
+
+</script>-->
+<body> 
+    <button id="btn" type="button">获取验证码01</button>
+    <input type="button" class="obtain " value=" 获取验证码" onclick="settime(this);">
+    <script>
+    	var countdown = 60;
+    	function settime(val){
+    		if(countdown == 0){
+    			val.removeAttribute("disabled");
+    			val.value = "获取验证码";
+    			return false;
+    		}else{
+    			val.setAttribute("disabled",true);
+    			val.value = "重新发送(" + countdown +")";
+    			countdown--;
+    		}
+    		setTimeout(function(){
+    			settime(val)
+    		},1000)
+    	}
+    </script>
+    
+</body>
+</html>

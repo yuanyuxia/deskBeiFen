@@ -1,0 +1,45 @@
+/* 
+* @Author: anchen
+* @Date:   2018-01-08 18:14:56
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-01-09 18:11:08
+*/
+.bt0{
+    float: right;
+    width: 80px;
+    height: 32px;
+    margin-top: -5px;
+   
+    background-color:#0088fe;
+    border-radius: 5px;
+}
+.bt0 a {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 32px;
+}
+.bt0 a{
+    text-decoration: none;
+}
+.header{
+     position: relative;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     width: 100%;
+     height:100%;
+     background-image: url(../Yimages/home_bg.jpg) ;
+     background-size: cover;
+     box-sizing: border-box;
+}
+.center .page{
+    margin-top: 62px;
+}
+ table tr td:last-child{
+     color: #0088fe;
+ }
+  
+/*  */

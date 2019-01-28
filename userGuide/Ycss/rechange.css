@@ -1,0 +1,79 @@
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+
+.head {
+    box-sizing: border-box;
+}
+
+.head span {
+    font-family: serif;
+    font-size: 0.36rem;
+    float: left;
+    display: block;
+}
+
+.head span:nth-of-type(2) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-55%);
+}
+.rec{
+    width: 100%;
+    box-sizing: border-box;
+}
+.rechange {
+    font-family: "PingFang-SC-Regular";
+    
+    font-size: 0.32rem;
+    color: #333;
+    line-height: 0.7rem;
+    border-bottom: 1px solid #ddd;
+    color: #333333;
+}
+
+.article {
+    margin-top: 0.4rem;
+}
+
+.article p {
+    font-weight: 400;
+    font-size: 0.3rem;
+    line-height: 0.5rem ;
+    color: #333;
+    font-family: "PingFang-SC-Regular";
+    margin-bottom: 0.1rem;
+}
+.article p:nth-of-type(5){
+    margin-top: 0.5rem;
+}
+.twophotos{
+    width: 100%;
+    box-sizing: border-box;
+}
+ .pic-p,.pic-z{
+    width: 49.8%;
+}
+
+ .pic-p img,.pic-z img {
+    width: 100%;
+  
+}
+.twophotos .pic-p {
+   float: left;
+}
+.twophotos .pic-z {
+    float: right;
+}
+.twophotos img:nth-of-type(1){
+	margin-right: 0.04rem;
+}
+.back{
+    left:0;
+}

@@ -1,0 +1,102 @@
+/* 
+* @Author: anchen
+* @Date:   2018-01-09 10:36:56
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-01-19 14:41:39
+*/
+ .center{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 835px;
+}
+.tanchukuang {
+    overflow: hidden;
+    width: 480px;
+    border: 1px solid gray;
+    position: absolute;
+    z-index: 999;
+    top: 200px;
+    left:50%;
+    margin-left: -220px;
+    padding: 0 30px;
+    padding-top: 20px;
+    display: none;
+    background-color:#fff;
+    cursor: pointer;
+}
+
+  .tanchukuang .username ul li {
+      float: left;
+
+  }
+ .tanchukuang .username ul li:first-child{
+     font-size:18px;
+     font-weight: 700;
+     color: #333;
+ }
+  .tanchukuang .username ul li:nth-of-type(2) {
+      float: right;
+      font-size: 24px;
+  }
+
+ .require h4,.callme h4,.result h4{
+      margin-top: 25px;
+      color: #999999;
+      font-size: 14px;
+  }
+
+.require p,.callme p {
+    
+      margin-top:10px;
+      font-size: 14px;
+      color: #333;
+  }
+  .result p{
+    color: #d142fa;
+  }
+  .tanchukuang  .del{
+      cursor: pointer;
+  }
+
+  .result{
+    margin-top: 15px;
+  }
+  .callme{
+      margin-bottom: 30px;
+  }
+.callme p span{
+  display: block;
+}
+.header{
+    box-sizing: border-box;
+     position: relative;
+     margin: 0 auto;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     width: 100%;
+     background-image: url(../Yimages/home_bg.jpg);
+}
+.clearmargin{
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+.center .page{
+  margin-top: 99px;
+}
+.center .page{
+    top: -65px;
+}
+.mask{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100% ;
+  background:#000;
+  background: rgba(0,0,0,.4);
+  display: none;
+}

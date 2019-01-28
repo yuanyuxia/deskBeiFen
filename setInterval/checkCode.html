@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发送验证码按钮点击变色</title>
+    <style type="text/css">
+        .checkCode {
+            cursor: pointer;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 26px;
+            width: 115px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="请输入验证码">
+    <input type="button" class="checkCode" id="btn" value="获取验证码">
+    <script>
+        var count = 30;
+            interval = null;
+            window.onload = function(){
+                var btn = document.getElementById('btn');
+                btn.onclick = function(){
+                    if(!interval){
+                        this.style.backgroundColor = 'blue';
+                        this.disabled = 'disabled';
+                        this.value = '重新发送('+ count-- +')';
+                        interval = setInterval(function(){
+                            if(count == 0){
+                                if(interval){
+                                    clearInterval(interval);
+                                    interval =ull;
+                                    count = 30;
+                                    btn.style.cursor = pointer;
+                                    btn.removeAttribute('disabled');
+                                    btn.style.backgroundColor = '';
+
+                                }
+                                return false;
+
+                            }else{
+                                btn.value = '重新发送('+ count-- +')';
+                            }
+
+                        },1000);
+                    }
+                }
+            }
+    </script>
+</body>
+</html>

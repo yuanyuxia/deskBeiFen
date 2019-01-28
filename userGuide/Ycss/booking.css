@@ -1,0 +1,31 @@
+.booking{
+    width: 100%;
+    padding: 0 0.3rem 0 0.25rem;
+    box-sizing: border-box;
+}
+.booking .booking-t{
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.32rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+}
+.b-info{
+   padding-top:  0.4rem;
+    font-size: 0.3rem;
+    color: #333;
+    line-height: 0.5rem;
+    margin-bottom: 0.1rem;
+    box-sizing: border-box;
+}
+
+
+.pic-l ,.pic-r{
+    width: 49.8%;
+}
+ img{
+    width: 100%;
+    display: block;
+
+}

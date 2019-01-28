@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0 ,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>停车账单</title>
+    <link rel="stylesheet" href="css/base.css"> 
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="font/iconfont.css"> 
+    <script src="js/rem.js"></script>
+</head>
+<body>
+    <div class="parking">
+        <div class="example">中原万达停车场</div>
+        <div class="parkingInfo">
+            <div class="parkingAdd">
+                <p>车牌号</p>
+                <h3>豫A 12569</h3>
+            </div>
+            <div class="parkingTime">
+                <p>停车时长</p>
+                <span>01:15:20</span>
+            </div>
+            <div class="money">
+                <p>费用（元）</p>
+                <span>88</span>
+            </div>
+            <ul>
+                <li>
+                    <span class="picture_l"><img src="imgs/zhanghu_weixin@2x.png"></span>
+                    <a class="zhifu">微信支付</a>
+                    <span  class="picture_r"><img src="imgs/zhifu_xuanzhong@2x.png "></span>
+                </li>
+                <li>
+                    <span class="picture_l"><img src="imgs/zhanghu_zhifubao@2x.png"></span>
+                    <a class="zhifu" >支付宝支付</a>
+                    <span class="picture_r"><img src="imgs/zhifu_weixuanzhong@2x.png "></span>
+                </li>
+            </ul>             
+   
+            <div class="btn">立即支付</div>
+        </div>
+        
+    </div>
+    <div class="footerPic">
+         <!-- <span class="close"><img src="imgs/guanbi@2x.png" alt=""></span> -->
+        <img src="imgs/dibuguanggao@2x.png" alt="">
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+    //    切换支付宝和微信选中
+		$(".picture_r img").each(function(){ 
+			$(this).click(function(){ 	
+			    $(this).attr("src","imgs/zhifu_xuanzhong@2x.png ");
+		        $(this).parent().parent().siblings().children(".picture_r").children("img").attr("src","imgs/zhifu_weixuanzhong@2x.png");
+		        	
+		        })
+			});
+	//底部广告关闭按钮
+     /*  $(".close").click(function(){
+        $(".footerPic").css({"display":"none"})    
+      }) */
+
+
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* 公共样式 */
+
+*{ margin: 0; padding: 0; }
+body, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, select, textarea, button, th, td{ padding: 0; margin: 0; font-family:"Microsoft YaHei"; color: #333333; box-sizing: border-box; }  
+body{ font-size:14px; font-family: "微软雅黑"; }
+ul li { list-style: none; }
+a{ text-decoration:none; outline:none; color:#333; }
+a img{ border:none; vertical-align: middle; border:none; width: 100%; }/*for IE*/
+h1,h2,h3,h4,h5,h6{ font-weight:normal; font-size:100%; }
+.fl_l{ float: left; }
+.fl_r{ float: right; }
+.clearfix::before,.clearfix::after { content: ""; display: table; }
+.clearfix::after { clear: both; }
+.clearfix { *zoom:1; }
+input,span,a{
+    display: inline-block;
+}

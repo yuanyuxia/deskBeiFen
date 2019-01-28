@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="login clearfix">
+        <div class="pic fl_l"><img src="imgs/denglu_pic.jpg" alt=""></div>
+        <div class="login_R fl_r">
+       
+                <div class="system"><a href="javascript:;"><img src="imgs/denglu_logo.png" alt=""></a></div>
+                <div class="account"><input type="text" placeholder="13643713157"></div> 
+                <div class="pw">  <input type="text" placeholder="请输入验证码" ><input class="code" type="button" id="btnSendCode" value="获取验证码" onclick="sendMessage()"></div>
+                <div class="button">登录</div>
+                <p>Power By 河南宏能网络科技有限公司</p>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+ <script>
+
+var InterValObj; //timer变量，控制时间 
+var count = 5; //间隔函数，1秒执行 
+var curCount;//当前剩余秒数 
+  
+function sendMessage() { 
+ 　curCount = count; 
+　　//设置button效果，开始计时 
+   $("#btnSendCode").attr("disabled", "true"); 
+   $("#btnSendCode").val(curCount + "s"); 
+   $("#btnSendCode").css({"background":"#e1e1e1"}); 
+   InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次  
+} 
+  
+//timer处理函数 
+function SetRemainTime() { 
+      if (curCount == 0) {         
+        window.clearInterval(InterValObj);//停止计时器 
+        $("#btnSendCode").removeAttr("disabled");//启用按钮 
+        $("#btnSendCode").val("重新发送"); 
+        $("#btnSendCode").css({"background":"#1e65e0"});
+      } 
+      else { 
+        curCount--; 
+        $("#btnSendCode").val(curCount + "s"); 
+      } 
+    } 
+ </script> 
+</body>
+</html>
